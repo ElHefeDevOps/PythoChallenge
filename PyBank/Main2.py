@@ -69,6 +69,21 @@ with open(csv_file, 'r') as budget_data:
 
    
 # # Gen Output Summary Financial Analysis
+
+output_path = os.path.join("Resources", "budget_data.csv","output","new.csv")
+
+# Open the file using "write" mode. Specify the variable to hold the contents
+with open(output_path, 'w', newline='') as csvfile:
+
+    # Initialize csv.writer
+    csvwriter = csv.writer(csvfile, delimiter=',')
+
+    # Write the first row (column headers)
+    csvwriter.writerow(['Total_Months', 'Total', 'Average Delta'])
+
+    # Write the second row
+    csvwriter.writerow(['Greatest_increase_in_Profit', 'Greatest_decrease_in_Profit'])
+
 # Output = ()
 Total Months = 86
 Total = 38382578
