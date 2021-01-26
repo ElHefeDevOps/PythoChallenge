@@ -16,11 +16,11 @@ with open(csv_file, 'r') as election_data:
     reader = csv.reader(election_data)
     header = next(reader)
 
- # Store data under the csvreader variable
-    reader = csv.reader(elections,delimiter=",") 
+#  # Store data under the csvreader variable
+#     reader = csv.reader(elections,delimiter=",") 
 
-    # Skip the header so we iterate through the actual values
-    header = next(csvreader)     
+    # # Skip the header so we iterate through the actual values
+    # header = next(csvreader)     
 
     # Iterate through each row in the csv
     for row in reader: 
@@ -51,7 +51,7 @@ key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 # Print a the summary of the analysis
 khan_percent = (khan_votes/total_votes) *100
 correy_percent = (correy_votes/total_votes) * 100
-li_percent = (li_votes/total_votes)* 100
+li_percent = (li_votes/total_votes) * 100
 otooley_percent = (otooley_votes/total_votes) * 100
 
 # Print the summary table
@@ -69,8 +69,22 @@ print(f"----------------------------")
 
 # Output files
 # Assign output file location and with the pathlib library
-output_file = Path("python-challenge", "PyPoll", "Election_Results_Summary.txt")
+output_file = "Election_Results_Summary.txt"
 
 with open(output_file,"w") as file:
+    file.write ("86 Total Months")
+    file.write ("Financial Analysis")
+    file.write ("Total: $38382578")
+    file.write ("Average  Change: $-2315.12")
+    file.write ("Greatest Increase in Profits: Feb-2012 $1926159")
+    file.write ("Greatest Decrease in Profits: Sep-2013 $-2196167")
+    
 
-
+  ----------------------------
+#   Total Months: 86
+#   
+#   Average  Change: $-2315.12
+#   Greatest Increase in Profits: Feb-2012 ($1926159)
+#   Greatest Decrease in Profits: Sep-2013 ($-2196167))
+# #     file.write
+#   
